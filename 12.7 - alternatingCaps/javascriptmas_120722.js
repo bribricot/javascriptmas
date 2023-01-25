@@ -6,33 +6,16 @@ Example input: "I'm so happy it's Monday"
 Example output: "I'M So hApPy iT'S MoNdAy"
 */
 
-function checkletter(char) {
-    if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z'))
-        return true;
-    return false;    
-}
-
 function altCaps(str) {
-    let i = 0;
-    let uppercaseify = false;
-    let newStr = '';
+    let newstr = '';
 
-    while (i < str.length) {
-        if (checkletter(str[i])) {
-            if (uppercaseify) {
-                newStr += str[i].toUpperCase();
-                uppercaseify = false;
-            }
-            else {
-                newStr += str[i].toLowerCase();
-                uppercaseifsy = true;
-            }
-        }
-        else
-            newStr += str[i];
-        i++;
-    }
-    return newStr;
+    for (let i = 0; i < str.length; i++) {
+		if (i % 2)
+			newstr += str[i].toLowerCase();
+        else 
+        	newstr += str[i].toUpperCase();
+	}
+	return newstr;
 }
 
 console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));
