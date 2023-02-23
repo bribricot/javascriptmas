@@ -23,21 +23,44 @@ Example input: !htrae ot emocleW
 Example output: Welcome to earth!
 */  
 
-function reverseString(arr){
-    return arr;
+function reverseStringManually(str) {
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
 }
+
+function reverseAllStringsInATabNoStringsAttached(tab) {
+	let arr = [];
+	for (let i = 0; i < tab.length; i++) {
+		let string = reverseStringManually(tab[i]);
+		arr.push(string);
+	}
+	return arr;
+}
+
+function reverseString(str) {
+    let splitString = str.split("");
+    let reverseString = splitString.reverse();
+    let joinString = reverseString.join("");
+    return joinString;
+}
+
 
 /*
 Step 2: Now we'll reverse all strings in an array. Write a function that takes in
 an array of strings and returns a new array with all strings reversed.
 
-You can use reuse your reverseString() function, use string methods, or 
-reverse the strings manually. 
+You can use r<euse your reverseString() function, use string methods, or reverse the strings manually. 
 */ 
 
 function reverseStringsInArray(arr){
-    return arr;
+	let messages = arr.split(" ");
+    	return reverseStringManually(arr);
 }
 
+
 console.log(reverseString(title));
+console.log(reverseStringManually(title));
 console.log(reverseStringsInArray(messages));
