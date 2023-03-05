@@ -1,7 +1,4 @@
-/* We Come in Peace!  
-We've received what (we assume) is a message of peace and brotherhood from 
-an alien planet. They almost got it right, but the messages are 
-backward. Write functions to reverse the backward messages so we can 
+/* Write functions to reverse the backward messages so we can 
 read what they have to say! 
 */ 
 
@@ -15,10 +12,7 @@ const messages = [
 
 /* Step 1: Reverse a string
 Write a function that takes in a string and returns the reverse 
-of that string. An interviewer may want to check if you know your
-string methods, or may want to know if you can reverse a string manually. 
-Practice both ways! 
-
+of that string.
 Example input: !htrae ot emocleW
 Example output: Welcome to earth!
 */  
@@ -31,20 +25,11 @@ function reverseStringManually(str) {
     return newString;
 }
 
-function reverseAllStringsInATabNoStringsAttached(tab) {
-	let arr = [];
-	for (let i = 0; i < tab.length; i++) {
-		let string = reverseStringManually(tab[i]);
-		arr.push(string);
-	}
-	return arr;
-}
-
 function reverseString(str) {
     let splitString = str.split("");
     let reverseString = splitString.reverse();
     let joinString = reverseString.join("");
-    return joinString;
+    	return joinString;
 }
 
 
@@ -56,7 +41,7 @@ You can use r<euse your reverseString() function, use string methods, or reverse
 */ 
 
 function reverseStringsInArray(arr){
-	let messages = arr.split(" ");
+	messages = arr.split(" ");
     	return reverseStringManually(arr);
 }
 

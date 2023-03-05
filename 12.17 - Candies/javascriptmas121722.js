@@ -1,8 +1,17 @@
 function candies(children, candy) {
-    //  write code here.
+    let result = candy / children;
+    result = children * Math.floor(result);
+    	return result;
+}
+
+function candies(children, candy) {
+    let rest = candy % children;
+    let total = candy - rest;
+    	return total;
 }
 
 
+//Math.round() Arrondir vers le haut. Pas dans le cas d'une division.
 
 /**
 * Test Suite 

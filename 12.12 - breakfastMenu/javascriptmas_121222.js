@@ -18,3 +18,7 @@ let element = document.getElementById("menu");
 let newTab = dinnerFoods.map((food) => `<div class="food">${food}</div>`);
 let tabConvertedToStringInOrderToAvoidAnyInadvertentCommas = newTab.join("");
 element.innerHTML = tabConvertedToStringInOrderToAvoidAnyInadvertentCommas;
+
+//Les methodes comme Map s'appliquent à des tableaux. Si je veux en sortie une string, je peux join ces tableaux en une simple string. 
+
+//Quand je veux map sur une constante par exemple, map va faire le travail de boucle pour moi à cause de la fonction annonyme que je vais lui passer en paramètre. Food ici correspond à une sorte de "this" Sur tous mes food (aka mes dinnerFoods sur lesquels je map) je vais remplacer avec map chaque case de mon tableau avec la string concaténée que je passe. 

@@ -3,7 +3,6 @@ function centuryFromYear(num) {
 }
 
 
-
 /**
 * Test Suite 
 */

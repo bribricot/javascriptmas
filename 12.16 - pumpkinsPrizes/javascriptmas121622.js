@@ -25,8 +25,21 @@ const kittyPrizes = [
 ];
 
 function flatten(arr){
- 
+ 	return arr.flat();
+}
+
+function recursivelyFlatten(array, ret = []) {
+    for (const entry of array) {
+        if (Array.isArray(entry)) {
+            flatten(entry, ret);
+        } else {
+            ret.push(entry);
+        }
+    }
+    return ret;
 }
 
 console.log(flatten(kittyPrizes));
 console.log(flatten(kittyScores));
+console.log(flatten(recursivelyFlatten(kittyPrizes));
+console.log(flatten(recursivelyFlatten(kittyScores)));

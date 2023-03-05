@@ -1,5 +1,8 @@
-function insertDashes(arr) {
-    // write code here
+function insertDashes(str) {
+    str = str.split(' ');
+    str = str.map(tab => tab.split('').join("-"));
+    
+    return str.join(' ');
 }
 
 
