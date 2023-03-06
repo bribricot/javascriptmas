@@ -20,6 +20,20 @@ Your function's output should look something like this:
  */
 
 function awardBonuses(){
+	for (let employeesid = 1; employeesid < 6; employeesid++) {
+		if (employeesid % 3 === 0) {
+			console.log("Vacation");
+		}
+		else if (employeesid % 5 === 0) {
+			console.log("$100,000 bonus!")
+		}
+		else if (employeesid % 3 === 0 && employeesid % 5 === 0) {
+			console.log("Jackpot");
+		}
+		else {
+			console.log(":(");
+		}
+	}
 }
 
 awardBonuses();

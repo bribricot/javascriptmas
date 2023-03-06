@@ -1,7 +1,6 @@
 function centuryFromYear(num) {
-    //  write code here.
+    return Math.floor((num-1)/100) + 1;  
 }
-
 
 /**
 * Test Suite 

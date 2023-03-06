@@ -20,8 +20,17 @@ Expected output:
 ]
 */
 
-function getFreePodcasts(data){
-   
+function formatItem(podcast) {
+    return {
+        title: podcast.title,
+        rating: podcast.rating,
+        paid: podcast.paid
+    }
 }
+
+function getFreePodcasts(data){
+	return data.filter(podcast => podcast.title).map(formatItem);
+}
+
 
 console.log(getFreePodcasts(podcasts))

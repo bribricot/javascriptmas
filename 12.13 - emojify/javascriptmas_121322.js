@@ -7,14 +7,6 @@ These shortcodes allow users to add an emoji to their messages by typing a code 
 For example, typing :smile: will replace that text with 😊 
 
 */
-
-`${"smile"} 
-${"angry"} 
-${"party"} 
-${"heart"} 
-${"cat"} 
-${"dog"}`;
-
 /* 1. Write a function that checks if a lowercase word starts and 
 ends with a colon. If it does, remove the colons and look up the word in the emoji object. If the word is in the emojis object, return the corresponding emoji. If it isn't, return the original word.
 
@@ -66,7 +58,6 @@ function emojifyPhrase(phrase) {
 	tab = tab.map(emojifyWord);
 	return tab.join(' ')
 }
-
 
 // console.log(emojifyWord(":heart:"));
 // console.log(emojifyWord(":flower:"));
