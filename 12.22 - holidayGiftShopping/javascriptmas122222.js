@@ -17,10 +17,16 @@ import products from "./data.js";
 */
 
 function sortProducts(data){
-    
+    data.sort((a, b) => a.price - b.price);
+    let arr = data.map(formatItem);
+    return arr;
+}
+
+function formatItem(item) {
+    return `${item.product},${item.price}`;
 }
 
 const listByCheapest = sortProducts(products);
-console.log(listByCheapest);
-
+for (let i = 0; i < listByCheapest.length; i++)
+    console.log(listByCheapest[i]);
 

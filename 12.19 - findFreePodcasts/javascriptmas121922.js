@@ -29,7 +29,7 @@ function formatItem(podcast) {
 }
 
 function getFreePodcasts(data){
-	return data.filter(podcast => podcast.title).map(formatItem);
+	return data.filter(podcast => podcast.paid === false).map(formatItem);
 }
 
 
